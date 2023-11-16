@@ -1,0 +1,48 @@
+/* ova datoteka ide u htdocs mapu*/
+
+table{
+    border: 2px solid black;
+    border-collapse:collapse;
+    background-color:whitesmoke;
+}
+
+th, td{
+    border: 1px solid black;
+    padding: 5px;
+    text-align: left;
+}
+
+tr{
+    text-align: left;
+}
+
+caption{
+    border:2px solid black;
+    border-bottom: 1px;
+}
+
+.registracija, .login, .promjenalozinke{
+    border: 2px solid black;
+    width: 200px;
+    text-align: center;
+    margin: auto;
+    background-color: lightgray;
+}
+
+p{
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+input[type=text] {
+    padding: 5px;
+    
+}
+
+input[type=password]{
+    padding: 5px;
+}
+
+input[type=email]{
+    padding: 5px;
+}

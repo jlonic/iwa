@@ -1,0 +1,23 @@
+{%load static%}
+<link rel="stylesheet" href="{%static "styles.css"%}">
+
+<h1>{{user.username}}</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ime filma</th>
+      <th>Vrijeme filma</th>
+      <th>Broj sjedala</th>
+    </tr>
+  </thead>
+  <tbody>
+    {%for karta in karte%}
+      <tr>
+        <td>{{karta.projekcija.ime_filma}}</td>
+        <td>{{karta.projekcija.vrijeme_filma}} min</td>
+        <td>{{karta.broj_sjedala}}</td>
+      </tr>
+    {%endfor%}
+  </tbody>
+</table>

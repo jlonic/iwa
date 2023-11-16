@@ -1,0 +1,22 @@
+/* ova datoteka ide u htdocs mapu*/
+
+table{
+    border: 2px solid black;
+    border-collapse:collapse;
+    background-color:white;
+}
+
+th, td{
+    border: 1px solid black;
+    padding: 5px;
+    text-align: left;
+}
+
+tr{
+    text-align: left;
+}
+
+caption{
+    border:2px solid black;
+    border-bottom: 1px;
+}

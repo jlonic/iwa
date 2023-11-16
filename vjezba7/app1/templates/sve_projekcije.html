@@ -1,0 +1,46 @@
+{%load static%}
+<link rel="stylesheet" href="{%static "styles.css"%}">
+
+<h1>SVE</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ime filma</th>
+      <th>Vrijeme filma</th>
+      <th>Slobodna sjedala</th>
+    </tr>
+  </thead>
+  <tbody>
+    {%for projekcija in projekcije %}
+      <tr>
+        <td>{{projekcija.ime_filma}}</td>
+        <td>{{projekcija.vrijeme_filma}} min</td>
+        <td>{{projekcija.broj_slobodnih_mjesta}}</td>
+      </tr>
+    {%endfor%}
+  </tbody>
+</table>
+
+<br><br><br><br><br><br>
+
+<h2>KARTE</h2>
+
+<form method="POST">
+  {% csrf_token %}  <!--bez ovoga=error-->
+  <label for="user">Odaberi korisnika:</label> 
+  <select name="user">
+    {%for user in user%}
+      <option value="{{user.id}}">{{user.username}}</option>
+    {%endfor%}
+  </select>
+  <br>
+  <label for="projekcija">Odaberi film:</label>
+  <select name="projekcija">
+    {%for projekcija in projekcije%}
+      <option value="{{projekcija.id}}">{{projekcija.ime_filma}}</option>
+    {%endfor%}
+  </select>
+  <br>
+  <button type="submit">Kupi kartu</button>
+</form>
